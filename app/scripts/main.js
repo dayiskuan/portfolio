@@ -15,7 +15,7 @@ $(document).on("ready", function() {
 
 	var dibujar = function(datos, posicion) {
 		datos["grupo" + posicion].map(function(itemWork){
-			$("#myWork").append("<li><a class='example-image-link' href='" + itemWork.imagen + "' data-lightbox='example-set' data-title='" + itemWork.name + itemWork.description + itemWork.url + "'><img class='example-image' src='" + itemWork.thumb + "' alt=''/></a></li>")
+			$("#myWork").append("<li class='new'><a class='example-image-link' href='" + itemWork.imagen + "' data-lightbox='example-set' data-title='" + itemWork.name + itemWork.description + itemWork.url + "'><img class='example-image' src='" + itemWork.thumb + "' alt=''/></a></li>")
 		})
 		contador = contador + 1;
 	} 
@@ -23,6 +23,8 @@ $(document).on("ready", function() {
 	$("#showWork").click(function(){
 		dibujar(trabajos, contador);
 	})
+
+
 
 	$("#primaryMenu").click(function(){
 		$("#principalNav").fadeIn(500);
